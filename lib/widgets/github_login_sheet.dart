@@ -41,7 +41,6 @@ class _GitHubLoginSheetState extends State<GitHubLoginSheet> {
 
     GitHub.getDeviceCode().then((ApiResponse response) {
       setState(() {
-        print(response.body);
         _deviceCode = response.body['device_code'];
         _userCode = response.body['user_code'];
         _verificationUri = response.body['verification_uri'];
